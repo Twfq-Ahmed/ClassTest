@@ -2,13 +2,17 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  PrimaryColumn,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
 @Entity('faculties')
 export class Faculties {
-  @PrimaryGeneratedColumn()
+  @PrimaryColumn({
+    type: 'varchar',
+    length: 14,
+  })
   id: string;
 
   @Column()
